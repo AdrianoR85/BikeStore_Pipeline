@@ -54,10 +54,12 @@ Train machine learning models using curated Gold-layer datasets to generate pred
 - [ ] Design the Medallion Layers
 
 ### Project Initialization
-- [ ] Define Project Naming Conventions
+- [ ] Create Repository Structure
+- [ ] Configure Git Integration
 - [ ] Connect Source Data to Databricks
 - [ ] Create Catalogs and Schemas (Bronze, Silver, and Gold)
 - [ ] Create a Declarative Pipeline in Databricks
+- [ ] Define Project Naming Conventions
 
 ### Build Bronze Layer
 - [ ] Analysing: Source Systems
