@@ -46,7 +46,45 @@ Train machine learning models using curated Gold-layer datasets to generate pred
 
 ---
 
-## Connecting S3 to Databricks
+## Project Steps
+
+### Design Data Architecture
+- [ ] Choose the Data Management Approach
+- [ ] Design the Pipeline Architecture
+- [ ] Design the Medallion Layers
+
+### Project Initialization
+- [ ] Define Project Naming Conventions
+- [ ] Connect Source Data to Databricks
+- [ ] Create Catalogs and Schemas (Bronze, Silver, and Gold)
+- [ ] Create a Declarative Pipeline in Databricks
+
+### Build Bronze Layer
+- [ ] Analysing: Source Systems
+- [ ] Coding: Data Ingestion
+- [ ] Validating: Data Completeness and Schema Consistency
+- [ ] Document: Draw Data flow (Draw.io/IA)
+- [ ] Commit Code into Git Repo
+
+### Build Silver Layer
+- [ ] Analysing: Explore & Understand Data
+- [ ] Document: Draw Data Integration (Draw.io/IA)
+- [ ] Coding: Data Cleansing and Transformation Logic
+- [ ] Validating: Data Quality and Correctness
+- [ ] Document: Extend Data Flow (Draw.io/IA)
+- [ ] Commit Code into Git Repo
+
+### Build Gold Layer
+- [ ] Analysing: Business Entities and Metrics
+- [ ] Coding: Business-Level Data Integrations
+- [ ] Validating: Data Integration Checks
+- [ ] Document: Draw Data Model of Star Schema (Draw.io/IA)
+- [ ] Document: Extend Data Flow (Draw.io/IA)
+- [ ] Commit Code into Git Repo
+
+---
+
+## How to Connect AWS S3 to Databricks
 
 ### S3 Bucket Setup
 An S3 bucket is a container used to store files (objects) in the cloud.
