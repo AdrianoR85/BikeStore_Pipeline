@@ -1,6 +1,10 @@
 # End-to-End Bike Store Data Engineering Lakehouse
 This project demonstrates a modern data engineering workflow built using Databricks and LakeFlow Spark Declarative Pipelines (SDP). The primary goal is to modernize a legacy procedural pipeline for a Bike Store and prepare high-quality data for analytics and machine learning workloads.
 
+## Menu
+- [Project Requirements](.project_requirements)
+
+
 ## Project Requirements
 ### **1️⃣ Data Engineering — Building the Lakehouse**
 
@@ -54,9 +58,9 @@ Train machine learning models using curated Gold-layer datasets to generate pred
 - [x] Design the Medallion Layers
 
 ### 🚧 Project Initialization
-- [ ] Create Repository Structure
-- [ ] Configure Git Integration
-- [ ] Connect Source Data to Databricks
+- [x] Create Repository Structure
+- [x] Configure Git Integration
+- [x] Connect Source Data to Databricks
 - [ ] Create Catalogs and Schemas (Bronze, Silver, and Gold)
 - [ ] Create a Declarative Pipeline in Databricks
 - [ ] Define Project Naming Conventions
