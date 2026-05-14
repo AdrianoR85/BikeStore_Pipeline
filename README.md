@@ -49,9 +49,9 @@ Train machine learning models using curated Gold-layer datasets to generate pred
 ## Project Steps
 
 ### 📐 Design Data Architecture
-- [ ] Choose the Data Management Approach
-- [ ] Design the Pipeline Architecture
-- [ ] Design the Medallion Layers
+- [x] Choose the Data Management Approach
+- [x] Design the Pipeline Architecture
+- [x] Design the Medallion Layers
 
 ### 🚧 Project Initialization
 - [ ] Create Repository Structure
