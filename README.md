@@ -85,6 +85,15 @@ Train machine learning models using curated Gold-layer datasets to generate pred
 - [ ] Commit Code into Git Repo
 
 ---
+## Imagens of Project
+
+### Design the Pipeline Architecture
+<img src="assets/pipeline.png" />
+
+### Design the Medallion Layers
+<img src="assets/medal_design.png" />
+
+---
 
 ## How to Connect AWS S3 to Databricks
 
