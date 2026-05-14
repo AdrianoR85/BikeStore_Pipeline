@@ -4,7 +4,7 @@ This project demonstrates a modern data engineering workflow built using Databri
 - [Project Requirements](#project-requirements)
 - [Project Steps](#project-steps)
 - [Project Images](#project-images)
-- [How to Connect AWS S3 to Databricks](#How-to-Connect-AWS-S3-to-Databricks)
+- [How to Connect AWS S3 to Databricks](#how-to-connect-aws-s3-to-databricks)
 
 ## Project Requirements
 ### **1️⃣ Data Engineering — Building the Lakehouse**
