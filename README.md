@@ -51,7 +51,7 @@ Train machine learning models using curated Gold-layer datasets to generate pred
 - Model evaluation
 - Prediction generation
 
-[⤴️](end-to-end-bike-store-data-engineering-lakehouse)
+[⤴️](#end-to-end-bike-store-data-engineering-lakehouse)
 
 ---
 
