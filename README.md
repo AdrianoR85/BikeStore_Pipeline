@@ -2,7 +2,7 @@
 This project demonstrates a modern data engineering workflow built using Databricks and LakeFlow Spark Declarative Pipelines (SDP). The primary goal is to modernize a legacy procedural pipeline for a Bike Store and prepare high-quality data for analytics and machine learning workloads.
 
 ## Menu
-- [Project Requirements](project_requirements)
+- [Project Requirements](#project_requirements)
 
 
 ## Project Requirements
