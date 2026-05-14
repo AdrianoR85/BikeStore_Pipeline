@@ -6,6 +6,8 @@ This project demonstrates a modern data engineering workflow built using Databri
 - [Project Images](#project-images)
 - [How to Connect AWS S3 to Databricks](#how-to-connect-aws-s3-to-databricks)
 
+---
+
 ## Project Requirements
 ### **1️⃣ Data Engineering — Building the Lakehouse**
 
@@ -48,6 +50,8 @@ Train machine learning models using curated Gold-layer datasets to generate pred
 - Model training
 - Model evaluation
 - Prediction generation
+
+[⤴️](end-to-end-bike-store-data-engineering-lakehouse)
 
 ---
 
