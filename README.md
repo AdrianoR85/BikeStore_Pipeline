@@ -72,11 +72,12 @@ Train machine learning models using curated Gold-layer datasets to generate pred
 - [x] Define Project Naming Conventions
 
 ### 🥉 Build Bronze Layer
-- [ ] Analysing: Source Systems
-- [ ] Coding: Data Ingestion
-- [ ] Validating: Data Completeness and Schema Consistency
-- [ ] Document: Draw Data flow (Draw.io/IA)
-- [ ] Commit Code into Git Repo
+- [x] Analysing: Source Systems
+- [x] Coding: Data Ingestion
+- [x] Validating: Data Completeness and Schema Consistency
+- [x] Document: Draw Data flow (Draw.io/IA)
+- [x] Document: Create a data dictonary (IA)
+- [x] Commit Code into Git Repo
 
 ### 🥈 Build Silver Layer
 - [ ] Analysing: Explore & Understand Data
@@ -100,6 +101,18 @@ Train machine learning models using curated Gold-layer datasets to generate pred
 
 ## Project Images
 
+- [x] Document: Draw Data flow (Draw.io/IA)
+- [x] Commit Code into Git Repo
+
+### 🥈 Build Silver Layer
+- [ ] Analysing: Explore & Understand Data
+- [ ] Document: Draw Data Integration (Draw.io/IA)
+- [ ] Coding: Data Cleansing and Transformation Logic
+- [ ] Validating: Data Quality and Correctness
+- [ ] Document: Extend Data Flow (Draw.io/IA)
+- [ ] Commit Code into Git Repo
+
+$0
 ### Design the Pipeline Architecture
 <img src="assets/pipeline.png" />
 

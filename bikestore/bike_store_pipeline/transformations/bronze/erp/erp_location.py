@@ -1,11 +1,10 @@
 from pyspark import pipelines as dp
 from pyspark.sql.functions import col, current_timestamp
-from source_paths_crm import PATHS
-
+from source_paths_erp import PATHS
 
 @dp.materialized_view(
-    name="bike_store.bronze.crm_customer",
-    comment="Customer Raw data from the CRM sales system",
+    name="bike_store.bronze.erp_location",
+    comment="Location Raw data from the ERP sales system",
     table_properties={
         "quality": "bronze",
         "layer": "bronze",
@@ -14,21 +13,20 @@ from source_paths_crm import PATHS
         "delta.autoOptimize.optimizeWrite": "true",
         "delta.autoOptimize.autoCompact": "true"
     }
-
-)
-def crm_customer_bronze():
+ )
+def crm_product_bronze():
     df = spark.read.format("csv")\
-        .option("header", "true")\
+        .option("header", True)\
         .option("inferSchema", "true")\
         .option("mode", "PERMISSIVE")\
         .option("mergeSchema", "true")\
         .option("columnNameOfCorruptRecord", "corrupt_record")\
-        .load(PATHS["crm_customer"])
+        .load(PATHS["erp_location"])
     
     df = (
         df
         .withColumn("file_name", col("_metadata.file_path"))
         .withColumn("ingest_datetime", current_timestamp())
     )
-
+    
     return df
