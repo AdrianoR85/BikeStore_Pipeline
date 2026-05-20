@@ -3,7 +3,7 @@
 # ============================================================================
 
 from pyspark import pipelines as dp
-from pyspark.sql.functions import col, current_timestamp
+from pyspark.sql.functions import col, current_timestamp, trim, regexp_replace, initcap, when, coalesce, lit
 
 
 # Already standardized naming, just cleanup and select
@@ -33,6 +33,43 @@ def crm_customer_silver():
 
     # Data quality: Remove records with null customer_id
     df_silver = df_silver.filter(col("customer_id").isNotNull())
+    
+    # Standardize text columns: trim, remove double spaces, title case, replace nulls
+    def standardize_text(column_name):
+        return initcap(
+            regexp_replace(
+                trim(coalesce(col(column_name), lit(""))),
+                "\\s+",  # Replace multiple spaces with single space
+                " "
+            )
+        )
+    
+    # Apply text standardization to string columns
+    df_silver = df_silver.withColumn("first_name", 
+        when(standardize_text("first_name") == "", lit("N/A"))
+        .otherwise(standardize_text("first_name"))
+    )
+    
+    df_silver = df_silver.withColumn("last_name",
+        when(standardize_text("last_name") == "", lit("N/A"))
+        .otherwise(standardize_text("last_name"))
+    )
+    
+    # Standardize marital_status: M -> Married, S -> Single, null/empty -> N/A
+    df_silver = df_silver.withColumn("marital_status",
+        when(trim(coalesce(col("marital_status"), lit(""))) == "M", lit("Married"))
+        .when(trim(coalesce(col("marital_status"), lit(""))) == "S", lit("Single"))
+        .when((col("marital_status").isNull()) | (trim(col("marital_status")) == ""), lit("N/A"))
+        .otherwise(standardize_text("marital_status"))
+    )
+    
+    # Standardize gender: F -> Female, M -> Male, null/empty -> N/A
+    df_silver = df_silver.withColumn("gender",
+        when(trim(coalesce(col("gender"), lit(""))) == "F", lit("Female"))
+        .when(trim(coalesce(col("gender"), lit(""))) == "M", lit("Male"))
+        .when((col("gender").isNull()) | (trim(col("gender")) == ""), lit("N/A"))
+        .otherwise(standardize_text("gender"))
+    )
 
     # Add Silver metadata
     df_silver = df_silver.withColumn("ingest_timestamp", current_timestamp())
