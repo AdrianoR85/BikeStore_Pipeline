@@ -50,6 +50,12 @@ def erp_customer_silver():
         .otherwise(lit("N/A"))
     )
     
+    df_silver = df_silver.withColumn(
+        "birth_date",
+        when(col("birth_date") > current_timestamp(), lit(None)
+        ).otherwise(col("birth_date"))
+    )
+
     # Handle birth_date nulls - keep as null for proper date handling
     # Add derived age column based on birth_date
     df_silver = df_silver.withColumn(

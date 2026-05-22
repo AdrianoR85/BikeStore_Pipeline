@@ -107,6 +107,9 @@ Train machine learning models using curated Gold-layer datasets to generate pred
 ### Design the Medallion Layers
 <img src="assets/medal_design.png" />
 
+### Extend Data Flow
+<img src="assets/schemas_documation_silver.png" />
+
 [⤴️](#end-to-end-bike-store-data-engineering-lakehouse)
 
 ---
