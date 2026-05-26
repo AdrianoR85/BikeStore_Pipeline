@@ -88,8 +88,8 @@ Train machine learning models using curated Gold-layer datasets to generate pred
 - [x] Commit Code into Git Repo
 
 ### 🥇 Build Gold Layer
-- [ ] Analysing: Business Entities and Metrics
-- [ ] Document: Draw Data Model of Star Schema (Draw.io/IA)
+- [x] Analysing: Business Entities and Metrics
+- [x] Document: Draw Data Model of Star Schema (Draw.io/IA)
 - [ ] Coding: Business-Level Data Integrations
 - [ ] Validating: Data Integration Checks
 - [ ] Document: Extend Data Flow (Draw.io/IA)
@@ -106,6 +106,19 @@ Train machine learning models using curated Gold-layer datasets to generate pred
 
 ### Design the Medallion Layers
 <img src="assets/medal_design.png" />
+
+### Integration Model
+<img src="assets/Integratio_model.png" />
+
+<br>
+<br>
+<br>
+
+### Star Schema
+<img src="assets/star_schema.png" />
+
+<br>
+<br>
 
 ### Extend Data Flow
 <img src="assets/schemas_documation_silver.png" />
