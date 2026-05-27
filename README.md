@@ -131,9 +131,9 @@ Train machine learning models using curated Gold-layer datasets to generate pred
 
 ## All Source Code
 
-- [Bronze code](#bikestore/bike_store_pipeline/transformations/bronze/README.md)
-- [Silver Code](#bikestore/bike_store_pipeline/transformations/silver/README.md)
-- [Gold Code](#bikestore/bike_store_pipeline/transformations/gold/README.md)
+- [Bronze code](./bikestore/bike_store_pipeline/transformations/bronze/README.md)
+- [Silver Code](./bikestore/bike_store_pipeline/transformations/silver/README.md)
+- [Gold Code](./bikestore/bike_store_pipeline/transformations/gold/README.md)
 
 ---
 
