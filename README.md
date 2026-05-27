@@ -3,7 +3,7 @@ This project demonstrates a modern data engineering workflow built using Databri
 
 **Topics:**
 - [Project Requirements](#project-requirements)
-- [Data Dictionary](#data_dictionary_bronze.md)
+- [Data Dictionary](#data-dictionary-bronze.md)
 - [Project Steps](#project-steps)
 - [Project Images](#project-images)
 - [All Source Code](#all-source-code)
