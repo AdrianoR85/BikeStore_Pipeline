@@ -54,7 +54,8 @@ Train machine learning models using curated Gold-layer datasets to generate pred
 - Model evaluation
 - Prediction generation
 
-[🔝](#end-to-end-bike-store-data-engineering-lakehouse)
+
+# [🔝](#end-to-end-bike-store-data-engineering-lakehouse)
 
 ---
 
@@ -97,7 +98,7 @@ Train machine learning models using curated Gold-layer datasets to generate pred
 - [x] Document: Extend Data Flow (Draw.io/IA)
 - [x] Commit Code into Git Repo
 
-[🔝](#end-to-end-bike-store-data-engineering-lakehouse)
+# [🔝](#end-to-end-bike-store-data-engineering-lakehouse)
 
 ---
 
@@ -125,7 +126,7 @@ Train machine learning models using curated Gold-layer datasets to generate pred
 ### Extend Data Flow
 <img src="assets/schemas_documation_gold.png" />
 
-[🔝](#end-to-end-bike-store-data-engineering-lakehouse)
+# [🔝](#end-to-end-bike-store-data-engineering-lakehouse)
 
 ---
 
@@ -185,5 +186,5 @@ Bucket
 9. Enable *I acknowlegde...* in the bottom of the page
 10. click **Create stack**  
 
-[🔝](#end-to-end-bike-store-data-engineering-lakehouse)
+# [🔝](#end-to-end-bike-store-data-engineering-lakehouse)
 
