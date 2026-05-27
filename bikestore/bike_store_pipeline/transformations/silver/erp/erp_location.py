@@ -20,6 +20,9 @@ from pyspark.sql.functions import (
         "delta.autoOptimize.autoCompact": "true"
     }
 )
+@dp.expect_or_drop("valid_customer_id", "customer_id IS NOT NULL")
+@dp.expect("valid_country", "country IS NOT NULL")
+@dp.expect("valid_region", "region IN ('Oceania', 'North America', 'Europe', 'Unknown', 'Other')")
 def erp_location_silver():
     df_bronze = spark.read.table("bike_store.bronze.erp_location")
     
@@ -38,9 +41,6 @@ def erp_location_silver():
         col("CID").alias("customer_id"),
         col("CNTRY").alias("country")
     )
-    
-    # Data quality: Remove records with null customer_id
-    df_silver = df_silver.filter(col("customer_id").isNotNull())
     
     # Standardize customer_id: remove dash, trim and uppercase
     df_silver = df_silver.withColumn(

@@ -18,7 +18,7 @@ from source_paths_crm import PATHS
 )
 def crm_customer_bronze():
     df = spark.read.format("csv")\
-        .option("header", "true")\
+        .option("header", True)\
         .option("inferSchema", "true")\
         .option("mode", "PERMISSIVE")\
         .option("mergeSchema", "true")\

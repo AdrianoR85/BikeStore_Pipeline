@@ -20,6 +20,11 @@ from pyspark.sql.functions import (
         "delta.autoOptimize.autoCompact": "true"
     }
 )
+@dp.expect_or_drop("valid_customer_id", "customer_id IS NOT NULL")
+@dp.expect("valid_gender", "gender IN ('Male', 'Female', 'N/A')")
+@dp.expect("valid_birth_date", "birth_date IS NULL OR birth_date <= CURRENT_DATE()")
+@dp.expect("valid_age", "age IS NULL OR (age >= 0 AND age <= 120)")
+@dp.expect("valid_age_group", "age_group IN ('Unknown', 'Under 25', '25-34', '35-44', '45-54', '55-64', '65+')")
 def erp_customer_silver():
     df_bronze = spark.read.table("bike_store.bronze.erp_customer")
     
@@ -29,9 +34,6 @@ def erp_customer_silver():
         col("BDATE").alias("birth_date"),
         col("GEN").alias("gender")
     )
-    
-    # Data quality: Remove records with null customer_id
-    df_silver = df_silver.filter(col("customer_id").isNotNull())
     
     # Standardize customer_id: remove NAS prefix, trim and uppercase
     df_silver = df_silver.withColumn(

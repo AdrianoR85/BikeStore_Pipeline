@@ -3,8 +3,10 @@ This project demonstrates a modern data engineering workflow built using Databri
 
 **Topics:**
 - [Project Requirements](#project-requirements)
+- [Data Dictionary](#data_dictionary_bronze.md)
 - [Project Steps](#project-steps)
 - [Project Images](#project-images)
+- [All Source Code](#all-source-code)
 - [How to Connect AWS S3 to Databricks](#how-to-connect-aws-s3-to-databricks)
 
 ---
@@ -90,10 +92,10 @@ Train machine learning models using curated Gold-layer datasets to generate pred
 ### 🥇 Build Gold Layer
 - [x] Analysing: Business Entities and Metrics
 - [x] Document: Draw Data Model of Star Schema (Draw.io/IA)
-- [ ] Coding: Business-Level Data Integrations
-- [ ] Validating: Data Integration Checks
-- [ ] Document: Extend Data Flow (Draw.io/IA)
-- [ ] Commit Code into Git Repo
+- [x] Coding: Business-Level Data Integrations
+- [x] Validating: Data Integration Checks
+- [x] Document: Extend Data Flow (Draw.io/IA)
+- [x] Commit Code into Git Repo
 
 [⤴️](#end-to-end-bike-store-data-engineering-lakehouse)
 
@@ -121,9 +123,17 @@ Train machine learning models using curated Gold-layer datasets to generate pred
 <br>
 
 ### Extend Data Flow
-<img src="assets/schemas_documation_silver.png" />
+<img src="assets/schemas_documation_gold.png" />
 
 [⤴️](#end-to-end-bike-store-data-engineering-lakehouse)
+
+---
+
+## All Source Code
+
+- [Bronze code](#bikestore/bike_store_pipeline/transformations/bronze/README.md)
+- [Silver Code](#bikestore/bike_store_pipeline/transformations/silver/README.md)
+- [Gold Code](#bikestore/bike_store_pipeline/transformations/gold/README.md)
 
 ---
 

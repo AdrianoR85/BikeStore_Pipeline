@@ -21,6 +21,12 @@ from pyspark.sql.window import Window
         "delta.autoOptimize.autoCompact": "true"
     }
 )
+@dp.expect_or_drop("valid_product_id", "product_id IS NOT NULL")
+@dp.expect("valid_product_key", "product_key IS NOT NULL")
+@dp.expect("valid_product_name", "product_name IS NOT NULL OR product_name = 'N/A'")
+@dp.expect("valid_product_cost", "product_cost >= 0")
+@dp.expect("valid_product_dates", "product_start_date IS NOT NULL AND (product_end_date IS NULL OR product_start_date <= product_end_date)")
+@dp.expect("valid_product_line", "product_line IN ('Mountain', 'Road', 'Touring', 'Other Sales', 'N/A')")
 def crm_product_silver():
     df_bronze = spark.read.table("bike_store.bronze.crm_product")
 

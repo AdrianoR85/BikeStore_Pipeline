@@ -14,7 +14,7 @@ from source_paths_erp import PATHS
         "delta.autoOptimize.autoCompact": "true"
     }
  )
-def crm_product_bronze():
+def erp_category_bronze():
     df = spark.read.format("csv")\
         .option("header", True)\
         .option("inferSchema", "true")\

@@ -1,8 +1,0 @@
-table,category,test,details,timestamp
-bike_store.bronze.crm_customer,Uniqueness,cst_id unique,6 duplicate IDs,2026-05-18 17:32:15.339183
-bike_store.bronze.crm_product,Logic,prd_end_dt >= prd_start_dt,200 records with end date before start date,2026-05-18 17:32:42.005299
-bike_store.bronze.crm_sales,Range,sls_sales >= 0,3 values below minimum,2026-05-18 17:32:54.953042
-bike_store.bronze.crm_sales,Range,sls_price >= 0,5 values below minimum,2026-05-18 17:32:55.822307
-bike_store.bronze.crm_sales,Referential Integrity,sls_prd_key FK valid,60398 sales with invalid product keys,2026-05-18 17:32:57.856268
-bike_store.bronze.erp_customer,Range,BDATE <= 2026-05-18,16 values above maximum,2026-05-18 17:33:50.686854
-bike_store.bronze.erp_location,Referential Integrity,CID FK valid,18484 locations with invalid customer IDs,2026-05-18 17:34:03.315354

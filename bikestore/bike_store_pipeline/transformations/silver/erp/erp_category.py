@@ -20,6 +20,10 @@ from pyspark.sql.functions import (
         "delta.autoOptimize.autoCompact": "true"
     }
 )
+@dp.expect_or_drop("valid_category_id", "category_id IS NOT NULL")
+@dp.expect("valid_category", "category IS NOT NULL")
+@dp.expect("valid_subcategory", "subcategory IS NOT NULL")
+@dp.expect("valid_maintenance_flag", "requires_maintenance IN (true, false)")
 def erp_category_silver():
     df_bronze = spark.read.table("bike_store.bronze.erp_category")
     
@@ -40,9 +44,6 @@ def erp_category_silver():
         col("SUBCAT").alias("subcategory"),
         col("MAINTENANCE").alias("requires_maintenance")
     )
-    
-    # Data quality: Remove records with null category_id
-    df_silver = df_silver.filter(col("category_id").isNotNull())
     
     # Standardize category_id: trim and uppercase
     df_silver = df_silver.withColumn(

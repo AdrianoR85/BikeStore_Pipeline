@@ -3,6 +3,8 @@
 ## Schema: bike_store.bronze
 Generated on: 2026-05-18 17:15:12
 
+[Back Home](#./Project_bikestore)
+
 ---
 
 ## 📋 SCHEMA SUMMARY

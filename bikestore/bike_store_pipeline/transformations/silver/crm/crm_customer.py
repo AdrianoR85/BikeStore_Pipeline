@@ -22,6 +22,11 @@ from pyspark.sql import Window
         "delta.autoOptimize.autoCompact": "true"
     }
 )
+@dp.expect_or_drop("valid_customer_id", "customer_id IS NOT NULL")
+@dp.expect("valid_gender", "gender IN ('Female', 'Male', 'N/A')")
+@dp.expect("valid_marital_status", "marital_status IN ('Married', 'Single', 'N/A')")
+@dp.expect("valid_created_date", "created_date IS NOT NULL AND created_date <= CURRENT_DATE()")
+@dp.expect("complete_names", "first_name != 'N/A' AND last_name != 'N/A'")
 def crm_customer_silver():
     df_bronze = spark.read.table("bike_store.bronze.crm_customer")
     
@@ -34,9 +39,6 @@ def crm_customer_silver():
         col("cst_gndr").alias("gender"),
         col("cst_create_date").alias("created_date")
     )
-
-    # Data quality: Remove records with null customer_id
-    df_silver = df_silver.filter(col("customer_id").isNotNull())
     
     # Standardize text columns: trim, remove double spaces, title case, replace nulls
     def standardize_text(column_name):
