@@ -136,6 +136,8 @@ Train machine learning models using curated Gold-layer datasets to generate pred
 - [Silver Code](./bikestore/bike_store_pipeline/transformations/silver/README.md)
 - [Gold Code](./bikestore/bike_store_pipeline/transformations/gold/README.md)
 
+# [🔝](#end-to-end-bike-store-data-engineering-lakehouse)
+
 ---
 
 ## How to Connect AWS S3 to Databricks
