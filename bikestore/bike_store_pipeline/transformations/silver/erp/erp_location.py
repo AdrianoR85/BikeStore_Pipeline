@@ -52,7 +52,8 @@ def erp_location_silver():
     df_silver = df_silver.withColumn(
         "country",
         when(standardize_text("country") == "", lit("N/A"))
-        .when(standardize_text("country") == "Us", lit("United States"))
+        .when(standardize_text("country").isin("Us", "Usa", "United States") , lit("USA"))
+        .when(standardize_text("country").isin("De"), lit("Denmark"))
         .otherwise(standardize_text("country"))
     )
     
@@ -60,7 +61,7 @@ def erp_location_silver():
     df_silver = df_silver.withColumn(
         "region",
         when(col("country").isin(["Australia", "New Zealand"]), lit("Oceania"))
-        .when(col("country").isin(["United States", "Canada", "Mexico"]), lit("North America"))
+        .when(col("country").isin(["USA", "Canada", "Mexico"]), lit("North America"))
         .when(col("country").isin(["United Kingdom", "Germany", "France", "Italy", "Spain", 
                                    "Netherlands", "Belgium", "Austria", "Switzerland", "Ireland", 
                                    "Poland", "Sweden", "Norway", "Denmark", "Finland"]), lit("Europe"))

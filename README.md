@@ -7,6 +7,7 @@ This project demonstrates a modern data engineering workflow built using Databri
 - [Project Steps](#project-steps)
 - [Project Images](#project-images)
 - [All Source Code](#all-source-code)
+- [Data Analysis]("Data-Analysis")
 - [How to Connect AWS S3 to Databricks](#how-to-connect-aws-s3-to-databricks)
 
 ---
@@ -138,6 +139,21 @@ Train machine learning models using curated Gold-layer datasets to generate pred
 
 # [🔝](#end-to-end-bike-store-data-engineering-lakehouse)
 
+---
+
+## Data Analysis
+
+### Questions:
+- [ ] What are the top-performing products?
+- [ ] Which customers generate the most revenue?
+- [ ] What is the monthly growth rate?
+- [ ] Which regions underperform?
+- [ ] What drives customer spending?
+- [ ] Which categories have the highest margins?
+- [ ] Where are operational bottlenecks happening?
+- [ ] What trends can we identify over time?
+
+[⤴️](#end-to-end-bike-store-data-engineering-lakehouse)
 ---
 
 ## How to Connect AWS S3 to Databricks
