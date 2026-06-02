@@ -153,6 +153,13 @@ Train machine learning models using curated Gold-layer datasets to generate pred
 - [ ] Where are operational bottlenecks happening?
 - [ ] What trends can we identify over time?
 
+### Dashboard
+<br>
+<img src="assets/dashboard.png" />
+<br />
+Created by Genie Code
+
+
 [⤴️](#end-to-end-bike-store-data-engineering-lakehouse)
 ---
 
